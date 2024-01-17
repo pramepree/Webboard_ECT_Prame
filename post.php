@@ -7,31 +7,38 @@
     <title>Post</title>
 </head>
 
-<body align="center">
+<body>
     <h1 style="text-align: center">PRAMEPREE VORNTHAISONG</h1>
-    <hr />
-    <?php
-    $id1 = $_GET['id'];
-    ?>
-    <div>
-        <h2 style="text-align: center">ต้องการดูกระทู้หมายเลข
-            <?php echo $id1; ?>
-        </h2>
-    </div>
+    <hr>
+    
+    <center>
+        ต้องการดูกระทู้หมายเลข
+        <?php echo $_GET['id'];
+        $i = $_GET['id'];
+        if (($i % 2) == 0)
+            echo "<br> เป็นกระทู้หมายเลขคู่";
+        else
+            echo "<br> เป็นกระทู้หมายเลขคี่";
+        ?>
+    </center>
     <br>
-    <table style="border: 2px solid black;width: 40%" align="center">
-        <tr style="background-color: #6cd2fe;">
-            <td>แสดงความคิดเห็น</td>
-        </tr>
-        <td align="center"><textarea name="" id="" cols="50" rows="10"></textarea></td>
+    <table style="border:2px solid black; width:40%" align="center">
         <tr>
-            <td><input type="submit" value="ส่งข้อความ"></td>
+            <td colspan="2" style="background-color: #6cd2fe;">แสดงความคิดเห็น</td>
+        </tr>
+        <tr>
+            <td><textarea style="width: 99%" name="message" cols="40" rows="10"></textarea>
+                <br>
+                <center>
+                    <input type="submit" value="ส่งข้อความ">
+            </td>
+            </center>
         </tr>
     </table>
     <br>
-    <div style="text-align: center">
-        <a href="index.html">กลับไปยังหน้าหลัก</a>
-    </div>
+    <center>
+        <a href="index.php">กลับไปหน้าหลัก</a>
+    </center>
 </body>
 
 </html>
